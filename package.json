@@ -1,0 +1,25 @@
+{
+	"name": "sapcex-api",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "node index.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@handlebars/allow-prototype-access": "^1.0.5",
+		"body-parser": "^1.18.3",
+
+		"express": "^4.17.1",
+		"express-handlebars": "^3.0.0",
+
+		"joi": "^13.4.0",
+		"method-override": "^2.3.10",
+
+		"mongoose": "^5.12.6",
+		"mongoose-paginate": "^5.0.3"
+	}
+}
