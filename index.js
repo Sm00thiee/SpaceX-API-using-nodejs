@@ -2,7 +2,6 @@ const express = require("express");
 const exphbs = require("express-handlebars");
 const methodOverride = require("method-override");
 const bodyParser = require("body-parser");
-const path = require("path");
 const Handlebars = require("handlebars");
 const {
   allowInsecurePrototypeAccess,
@@ -11,7 +10,7 @@ const {
 const app = express();
 
 // Load Routes
-const api = require('./routes/api')
+const home = require('./routes/home')
 
 // Connecting to MongoDB...
 const mongoose = require("mongoose");
@@ -52,18 +51,10 @@ app.use(bodyParser.json());
 // Method Override
 app.use(methodOverride("_method"));
 
-// Home Route
-// app.get("/", (req, res) => {
-//   res.render("home", {
-//     title: "Welcome",
-//     layout: "home"
-//   });
-// });
 
 // Use Routes
 // app.use("/customers", customers);
-app.use('/api', api)
-
+app.use('/', home)
 // Listening on Port:5000
 const port = process.env.NODE_ENV || 5000;
 app.set("port", port);

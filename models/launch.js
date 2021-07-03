@@ -35,19 +35,4 @@ const launchSchema = new mongoose.Schema({
 
 const Launch = mongoose.model('Launch', launchSchema)
 
-function validateLaunch(launch){
-    const schema = {
-        small: Joi.string(),
-        large: Joi.string(),
-        name: Joi.string(),
-        details: Joi.string(),
-        name: Joi.string(),
-        date_utc: Joi.string(),
-        flight_no: Joi.number().integer().positive(),
-        id: Joi.string()
-    }
-    return Joi.validate(launch, schema)
-}
-
 exports.Launch = Launch;
-exports.validate = validateLaunch;

@@ -1,0 +1,54 @@
+<form action="/search", method="POST">
+    <td>
+        <tr>Start date</tr>
+        <tr><input name="start" type="text"></tr>
+
+    </td>
+    <td>
+        <tr>End date</tr>
+
+        <tr><input name="end" type="text"></tr>
+
+    </td>
+    <input type="submit" value="Search">
+</form>
+<form action="/" method="POST">
+    <input type="submit" value="Synchronize" />
+</form>
+
+{{#if return}}
+<form action="/" method="GET">
+    <input type="submit" value="Return" />
+</form>
+{{/if}}
+
+<div>
+    {{#if launches}}
+    <table>
+        {{#each launches}}
+        <tr>
+            <td rowspan="5"><img src="{{image.small}}" alt=""></td>
+            <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+            <td><b>Flight number:</b> {{flight_no}}</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><b>Name:</b> {{name}}</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><b>Details:</b>: {{details}}</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><b>Date UTC:</b> {{date_utc}}</td>
+            <td>&nbsp;</td>
+        </tr>
+
+        {{/each}}
+    </table>
+    {{/if}}
+</div>
