@@ -1,2 +1,7 @@
 # SpaceX-API-using-nodejs
-A repo for entry test of Hamsa Technology 
+
+## How to use: 
+```
+npm i
+npm start
+```
