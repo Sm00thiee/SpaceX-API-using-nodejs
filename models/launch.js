@@ -28,7 +28,9 @@ const launchSchema = new mongoose.Schema({
     },
     date_utc: {
         type: String
-    }
+    },
+    id: {
+        type: String    }
 })
 
 const Launch = mongoose.model('Launch', launchSchema)
@@ -41,7 +43,8 @@ function validateLaunch(launch){
         details: Joi.string(),
         name: Joi.string(),
         date_utc: Joi.string(),
-        flight_no: Joi.number().integer().positive()
+        flight_no: Joi.number().integer().positive(),
+        id: Joi.string()
     }
     return Joi.validate(launch, schema)
 }
