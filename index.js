@@ -16,7 +16,7 @@ const home = require('./routes/home')
 const mongoose = require("mongoose");
 mongoose
   .connect(
-    "mongodb://localhost:27017/SpaceX",
+    "mongodb://localhost:27017/Test",
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
